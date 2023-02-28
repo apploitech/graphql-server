@@ -49,6 +49,16 @@ blueprint to build your own integration or GraphQL server implementations.
 
 Please let us know when you have built something new, so we can list it here.
 
+## How to compile a new version of graphql-server
+- Go to graphql_server/version.py file and update from 3.0.0b5 to 3.0.0b6 (for example)
+- Commit and pushes the last changes
+- Go to in the master branch (after merge pull request)
+- Execute the command `python setup.py sdist`
+- Make sure you have installed the python twine package (`pip install twine`).
+- Execute the twine command to upload the new version of graphql-server to pypi.org (`twine upload dist/graphql-server-custom-3.0.0b5.tar.gz`)
+- In the previous step you will be asked for the pypi.org credentials are in 1password, you must request them in #password_requests
+- Update all applications that use graphql-server with this version in their requirements.txt
+
 ## Contributing
 
 See [CONTRIBUTING.md](https://github.com/graphql-python/graphql-server/blob/master/CONTRIBUTING.md)

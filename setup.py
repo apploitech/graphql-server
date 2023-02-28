@@ -57,7 +57,7 @@ with open("README.md", encoding="utf-8") as readme_file:
     readme = readme_file.read()
 
 setup(
-    name="graphql-server",
+    name="graphql-server-custom",
     version=version,
     description="GraphQL Server tools for powering your server",
     long_description=readme,
